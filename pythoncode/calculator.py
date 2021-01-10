@@ -9,4 +9,7 @@ class Calculator:
         return a * b
 
     def div(self, a, b):
-        return a / b
+        try:
+            return a / b
+        except ZeroDivisionError as e:
+            print("除数不能为:0",e)
